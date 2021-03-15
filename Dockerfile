@@ -1,3 +1,4 @@
+# Используем облегченный образ Debian
 FROM debian:10.8-slim
 
 RUN set -eux; \
