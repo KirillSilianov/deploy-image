@@ -1,6 +1,9 @@
 # Используем облегченный образ Debian
 FROM debian:10.8-slim
 
+LABEL version="0.2"
+LABEL description="Deploy image"
+
 RUN set -eux; \
     apt-get update; \
     apt-get install -y \
