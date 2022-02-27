@@ -1,7 +1,7 @@
 # Используем облегченный образ Debian
-FROM debian:10.8-slim
+FROM debian:11.2-slim
 
-LABEL version="0.2"
+LABEL version="0.3"
 LABEL description="Deploy image"
 
 RUN set -eux; \
@@ -15,4 +15,5 @@ RUN set -eux; \
 	    curl \
 	    rsync \
 	    zip \
-	    ansible
+	    ansible ; \
+    ansible-galaxy collection install community.docker
